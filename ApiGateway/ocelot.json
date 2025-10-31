@@ -1,0 +1,286 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5095
+                }
+            ],
+            "UpstreamPathTemplate": "/sales/swagger/v1/swagger.json",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5186
+                }
+            ],
+            "UpstreamPathTemplate": "/stock/swagger/v1/swagger.json",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5100
+                }
+            ],
+            "UpstreamPathTemplate": "/auth/swagger/v1/swagger.json",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/users",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5100
+                }
+            ],
+            "UpstreamPathTemplate": "/auth/users",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "SwaggerKey": "auth"
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/register",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5100
+                }
+            ],
+            "UpstreamPathTemplate": "/auth/register",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "SwaggerKey": "auth"
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/login",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5100
+                }
+            ],
+            "UpstreamPathTemplate": "/auth/login",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "SwaggerKey": "auth"
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth/users/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5100
+                }
+            ],
+            "UpstreamPathTemplate": "/auth/users/{id}",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ],
+            "SwaggerKey": "auth"
+        },
+        {
+            "DownstreamPathTemplate": "/api/orders",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5095
+                }
+            ],
+            "UpstreamPathTemplate": "/sales/orders",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "SwaggerKey": "orders",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/orders/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5095
+                }
+            ],
+            "UpstreamPathTemplate": "/sales/orders/{id}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "SwaggerKey": "orders",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/orders",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5095
+                }
+            ],
+            "UpstreamPathTemplate": "/sales/orders",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "SwaggerKey": "orders",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/orders/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5095
+                }
+            ],
+            "UpstreamPathTemplate": "/sales/orders/{id}",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ],
+            "SwaggerKey": "orders",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/products",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5186
+                }
+            ],
+            "UpstreamPathTemplate": "/stock/products",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "SwaggerKey": "products",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/products/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5186
+                }
+            ],
+            "UpstreamPathTemplate": "/stock/products/{id}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "SwaggerKey": "products",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/products",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5186
+                }
+            ],
+            "UpstreamPathTemplate": "/stock/products",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "SwaggerKey": "products",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/products/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5186
+                }
+            ],
+            "UpstreamPathTemplate": "/stock/products/{id}",
+            "UpstreamHttpMethod": [
+                "PATCH",
+                "DELETE"
+            ],
+            "SwaggerKey": "products",
+            "AddHeadersToDownstream": {
+                "Authorization": "{Authorization}"
+            }
+        }
+    ],
+    "SwaggerEndPoints": [
+        {
+            "Key": "products",
+            "Config": [
+                {
+                    "Name": "StockService API",
+                    "Version": "v1",
+                    "Url": "http://localhost:5000/stock/swagger/v1/swagger.json"
+                }
+            ]
+        },
+        {
+            "Key": "orders",
+            "Config": [
+                {
+                    "Name": "SalesService API",
+                    "Version": "v1",
+                    "Url": "http://localhost:5000/sales/swagger/v1/swagger.json"
+                }
+            ]
+        },
+        {
+            "Key": "auth",
+            "Config": [
+                {
+                    "Name": "LoginService API",
+                    "Version": "v1",
+                    "Url": "http://localhost:5000/auth/swagger/v1/swagger.json"
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5000"
+    }
+}
